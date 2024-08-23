@@ -135,6 +135,7 @@ bool connectToServer() {
      *  Unsubscribe parameter defaults are: response=false. 
      */
     if(pRemoteCharacteristic->canNotify()) {
+      printf("can notify, subscribing");
         //pRemoteCharacteristic->registerForNotify(notifyCallback);
         pRemoteCharacteristic->subscribe(true, notifyCallback);
     }
